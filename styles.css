@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 7px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+h3 {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.Kira h2, .Kira p, .Jeanette p, .Jeanette h2 {
+    color:hsl(217, 19%, 35%)
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px 0 15px;
+}
+
+section {
+    opacity: 0.7;
+}
+
+.container {
+    display: grid;
+    max-width: 1044px;
+    gap: 20px;
+    margin: 35px auto 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "Daniel Daniel Johathan Kira"
+        "Jeanette Patrick Patrick Kira";
+}
+
+
+.testimonial {
+    border: 1px solid black;
+    border-radius: 7px;
+    border: none;
+    padding: 20px;
+}
+
+
+.Daniel {
+    grid-area: Daniel;
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 55vh 0;
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+}
+
+.Daniel img, .Patrick img {
+    border-color: rgb(163, 95, 228);
+}
+
+.Jonathan {
+    grid-area: Johathan;
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.Kira {
+    grid-area: Kira;
+    background-color: white;
+}
+
+.Jeanette {
+    grid-area: Jeanette;
+    background-color: white;
+}
+
+.Patrick {
+    grid-area: Patrick;
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+}
+
+
+.image_class {
+    border-radius: 50%;
+    border: 3px solid  rgb(233, 226, 217);
+    float: left;
+    margin-right: 15px;
+    width: 50px;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 900px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "Daniel Patrick"
+            "Jeanette Johathan"
+            "Kira Kira";
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        margin: 5px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "Daniel"
+            "Johathan"
+            "Jeanette"
+            "Patrick"
+            "Kira";
+    }
+}
